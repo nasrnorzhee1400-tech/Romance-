@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6d1638">
+<title>برای عشق زندگی‌ام ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+:root{--rose:#ff7396;--pink:#ffc1d1;--wine:#65183b;--cream:#fff5f7;--gold:#ffe6a6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Vazirmatn',Tahoma,sans-serif;color:#fff;background:#230d25;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 18% 18%,#7d2454 0,transparent 38%),radial-gradient(ellipse at 85% 30%,#4d2464 0,transparent 40%),linear-gradient(145deg,#1d1028,#541b42 58%,#230d25)}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.float-heart{position:absolute;bottom:-50px;opacity:0;animation:rise linear forwards;filter:drop-shadow(0 0 9px #ff729866)}
+@keyframes rise{10%{opacity:.75}90%{opacity:.65}100%{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.wrap{width:min(1050px,92%);margin:auto}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0;color:#ffe1ea;font-size:.92rem}
+.brand{font-weight:800;letter-spacing:.2px}.brand span{color:var(--rose)}
+.pill{border:1px solid #ffffff38;border-radius:99px;padding:8px 14px;background:#ffffff0c}
+.hero{min-height:80vh;display:grid;place-items:center;text-align:center;padding:45px 0 80px}
+.eyebrow{color:var(--gold);font-size:.9rem;letter-spacing:1px}
+.big-heart{font-size:clamp(76px,14vw,132px);line-height:1.4;display:inline-block;filter:drop-shadow(0 0 24px #ff6e9a70);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+h1{font-size:clamp(2rem,6vw,4.4rem);line-height:1.45;margin:8px 0 18px;font-weight:800}
+.gradient{background:linear-gradient(90deg,#ffe6a6,#ff9db9,#fff0f4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:660px;margin:0 auto;color:#f7dfe9;line-height:2.2;font-size:clamp(1rem,2.5vw,1.18rem)}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+button,.button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:13px 24px;font-weight:700;transition:.25s;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.primary{background:linear-gradient(135deg,#ff8eaa,#ffbfd0);color:#511632;box-shadow:0 10px 35px #ff739633}
+.secondary{color:#fff;border:1px solid #ffffff45;background:#ffffff0b}
+button:hover,.button:hover{transform:translateY(-3px);filter:brightness(1.07)}
+section{padding:58px 0}
+.section-title{text-align:center;font-size:clamp(1.6rem,4vw,2.5rem);margin:0 0 12px}
+.section-sub{text-align:center;color:#e8c8d8;line-height:2;margin:0 auto 32px;max-width:620px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:linear-gradient(145deg,#ffffff13,#ffffff07);border:1px solid #ffffff1c;border-radius:24px;padding:25px 22px;backdrop-filter:blur(10px);min-height:190px}
+.card .emoji{font-size:2rem}.card h3{margin:13px 0 8px;color:#ffd4df}.card p{margin:0;color:#ead2df;line-height:2}
+.letter-box{max-width:760px;margin:auto;padding:clamp(24px,5vw,48px);border-radius:30px;border:1px solid #ffffff2c;background:linear-gradient(140deg,#ffffff16,#ffffff08);box-shadow:0 25px 80px #10061445;text-align:center}
+.letter-box .seal{font-size:2.4rem}
+.letter{display:none;text-align:right;color:#fff0f5;line-height:2.4;font-size:1.05rem;white-space:pre-line;margin-top:22px;animation:fade .7s ease}
+.letter.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.quote{font-size:clamp(1.15rem,3vw,1.8rem);line-height:2.1;color:#ffe0e9;text-align:center;max-width:780px;margin:0 auto}
+.quote b{color:var(--gold)}
+.counter{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.counter div{min-width:105px;padding:16px 20px;border-radius:18px;background:#ffffff0c;border:1px solid #ffffff20}
+.counter strong{display:block;font-size:1.6rem;color:#ffd6a0}.counter span{font-size:.82rem;color:#e8c8d8}
+footer{text-align:center;padding:45px 0 35px;color:#d8b7c8;font-size:.9rem}
+footer .end-heart{color:#ff8bab;font-size:1.4rem}
+#toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#fff0f5;color:#5b1937;border-radius:99px;padding:12px 20px;opacity:0;transition:.3s;pointer-events:none;box-shadow:0 10px 30px #0003;z-index:5;white-space:nowrap}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.hero{min-height:75vh;padding-top:25px}.card{min-height:auto}nav{padding-top:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+<div class="wrap">
+<nav><div class="brand">قصه‌ی <span>ما</span> ❤️</div><div class="pill">یک سورپرایز کوچولو، از ته قلبم</div></nav>
+<main>
+<section class="hero">
+<div>
+<div class="eyebrow">برای خاص‌ترین آدمِ دنیای من</div>
+<div class="big-heart" aria-hidden="true">💗</div>
+<h1>برای <span class="gradient" id="herName">عشقِ زندگی‌ام</span></h1>
+<p class="lead">بین تمام اتفاق‌های قشنگ دنیا، آشنایی با تو قشنگ‌ترین اتفاق زندگی من بود. این صفحه فقط گوشه‌ی کوچکی از عشقیه که هر روز توی قلبم بزرگ‌تر می‌شه.</p>
+<div class="actions"><button class="primary" id="openLetter">💌 نامه‌ی مخفی من</button><a class="button secondary" href="#reasons">چرا عاشقتم؟ ↓</a></div>
+</div>
+</section>
+<section id="reasons">
+<h2 class="section-title">چند دلیل از <span class="gradient">بی‌نهایت دلیل</span></h2>
+<p class="section-sub">اگه بخوام همه‌ی دلیل‌هام رو بنویسم، این صفحه هیچ‌وقت تموم نمی‌شه… ولی بذار با چندتاش شروع کنم.</p>
+<div class="cards">
+<article class="card"><div class="emoji">🌷</div><h3>آرامشِ منی</h3><p>کنار تو، حتی شلوغ‌ترین روزها هم آروم‌تر می‌شن. بودنت برای من شبیه خونه‌ست.</p></article>
+<article class="card"><div class="emoji">✨</div><h3>دنیام رو قشنگ می‌کنی</h3><p>با یه لبخندت می‌تونی روزم رو عوض کنی؛ تو جادوی ساده‌ی زندگی منی.</p></article>
+<article class="card"><div class="emoji">🫶🏻</div><h3>انتخابِ هر روزمی</h3><p>عشق برای من فقط یه حس نیست؛ انتخابیه که هر روز، با تمام قلبم، دوباره انجامش می‌دم.</p></article>
+</div>
+</section>
+<section>
+<div class="letter-box">
+<div class="seal">💌</div>
+<h2 class="section-title">یه حرف از تهِ دلم</h2>
+<p class="section-sub">این چند خط رو برای تو نگه داشتم؛ برای وقتی که دلت خواست یادت بیاد چقدر عزیزی.</p>
+<button class="primary" id="openLetter2">نامه رو باز کن ❤️</button>
+<div class="letter" id="letterText">عزیزترینم،
+
+شاید همیشه نتونم به اندازه‌ای که دوستت دارم، با کلمه‌ها نشونش بدم؛ اما می‌خوام بدونی بودنت یکی از ارزشمندترین هدیه‌های زندگی منه.
+
+من عاشق خنده‌هاتم، مهربونی‌هات، حتی لحظه‌های ساده‌ای که کنار هم می‌گذرونیم. لازم نیست هر روز اتفاق بزرگی بیفته؛ همین که تو کنارمی، خیلی چیزها رو قشنگ‌تر می‌کنه.
+
+قول نمی‌دم همیشه همه‌چیز بی‌نقص باشه؛ قول می‌دم برای شنیدنت، درکت کردن، خندوندنت و ساختن خاطره‌های قشنگ باهات تلاش کنم.
+
+اگه دوباره به اول قصه برگردم، باز هم دلم می‌خواد مسیرم به تو برسه.
+
+دوستت دارم؛ بیشتر از چیزی که این چند خط بتونن بگن. ❤️
+
+همیشه، با عشق…</div>
+</div>
+</section>
+<section>
+<p class="quote">«از بین تمام جاهای دنیا،<br> <b>قشنگ‌ترین جای من کنار توئه.</b>»</p>
+<div class="counter"><div><strong>∞</strong><span>اندازه‌ی عشقم</span></div><div><strong>هر روز</strong><span>دوباره انتخابت می‌کنم</span></div><div><strong>تو + من</strong><span>تیمِ همیشگی</span></div></div>
+</section>
+<section style="text-align:center;padding-bottom:35px">
+<h2 class="section-title">یه بغلِ مجازی برای تو 🤍</h2>
+<p class="section-sub">اگه الان پیشم بودی، این صفحه رو می‌بستم و محکم بغلت می‌کردم.</p>
+<button class="primary" id="hug">برای یه بغل کلیک کن 🫂</button>
+</section>
+</main>
+<footer><div class="end-heart">♥</div><p>با عشق ساخته شده، فقط برای تو.</p><small>یک صفحه‌ی کوچک برای یک عشقِ بزرگ</small></footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+const hearts = document.getElementById('hearts');
+function makeHeart(){
+ const h=document.createElement('span'); h.className='float-heart';
+ h.textContent=['♥','♡','💗','✦'][Math.floor(Math.random()*4)];
+ h.style.left=Math.random()*100+'%'; h.style.fontSize=(14+Math.random()*22)+'px';
+ h.style.animationDuration=(8+Math.random()*8)+'s';
+ hearts.appendChild(h); setTimeout(()=>h.remove(),17000);
+}
+for(let i=0;i<14;i++) setTimeout(makeHeart,i*350);
+setInterval(makeHeart,900);
+const letter=document.getElementById('letterText');
+function reveal(){letter.classList.add('show');document.getElementById('openLetter').textContent='💖 نامه باز شد';document.getElementById('openLetter2').textContent='نامه‌ی قشنگ ما ❤️';letter.scrollIntoView({behavior:'smooth',block:'center'});}
+document.getElementById('openLetter').addEventListener('click',reveal);
+document.getElementById('openLetter2').addEventListener('click',reveal);
+let toastTimer;
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('on');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('on'),2800)}
+document.getElementById('hug').addEventListener('click',()=>{for(let i=0;i<24;i++)setTimeout(makeHeart,i*45);toast('یه بغلِ محکم و هزار تا بوسه برای تووو ❤️')});
+</script>
+</body>
+</html>
